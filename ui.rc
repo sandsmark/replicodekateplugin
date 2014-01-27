@@ -1,0 +1,9 @@
+<!DOCTYPE kpartgui>
+<gui name="katereplicode-plugin" library="katereplicodeplugin" version="7">
+<MenuBar>
+ <Menu name="projects"><Text>&amp;Projects</Text>
+     <Separator />
+     <Action name="katereplicode_run" />
+ </Menu>
+</MenuBar>
+</gui>

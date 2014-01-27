@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tabWidget</class>
+ <widget class="QTabWidget" name="tabWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>409</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="run">
+   <attribute name="title">
+    <string>Run</string>
+   </attribute>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_34">
+      <property name="text">
+       <string>Run time (milliseconds):</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSpinBox" name="runTime"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_35">
+      <property name="text">
+       <string>Probe level:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="probeLevel"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>User operations layout module:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="KUrlRequester" name="userModulePath"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>User classes file:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="KUrlRequester" name="userClassPath"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Base period:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QSpinBox" name="basePeriod"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Reduction core count</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QSpinBox" name="reductionCoreCount"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Time core count</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QSpinBox" name="timeCoreCount"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="system">
+   <attribute name="title">
+    <string>System</string>
+   </attribute>
+   <layout class="QFormLayout" name="formLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Model inertia success rate threshold:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QDoubleSpinBox" name="modelInertiaSuccessRate"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Model inertia count threshold:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="modelInertiacount"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Targeted pattern extractor delta success rate threshold:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QDoubleSpinBox" name="tpxDeltaSuccessRate"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Minimum simulation time horizon:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QSpinBox" name="minSimTimeHoriz"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Maximum simulation time horizon:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QSpinBox" name="maxSimTimeHoriz"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Simulation time horizon:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QDoubleSpinBox" name="simTimeHoriz"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Targeted pattern extractor time horizon:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QSpinBox" name="tpxTimeHoriz"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>Perf sampling period:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QSpinBox" name="perfSamplePeriod"/>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>Float tolerance:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QDoubleSpinBox" name="floatTolerance"/>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Timer tolerance:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QSpinBox" name="timerTolerance"/>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_16">
+      <property name="text">
+       <string>Primary time horizon:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QSpinBox" name="primaryTimeHoriz"/>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>Secondary time horizon:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1">
+     <widget class="QSpinBox" name="secondaryTimeHoriz"/>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_18">
+      <property name="text">
+       <string>Notification marker resilience:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QSpinBox" name="notifMarkerRes"/>
+    </item>
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_19">
+      <property name="text">
+       <string>Goal prediction success resilience:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QSpinBox" name="goalPredSuccessRes"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="debugtab">
+   <attribute name="title">
+    <string>Debug</string>
+   </attribute>
+   <layout class="QFormLayout" name="formLayout_3">
+    <property name="fieldGrowthPolicy">
+     <enum>QFormLayout::ExpandingFieldsGrow</enum>
+    </property>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_22">
+      <property name="text">
+       <string>Debug:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QCheckBox" name="debug">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_23">
+      <property name="text">
+       <string>Debug windows:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="debugWindows"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_24">
+      <property name="text">
+       <string>Traces:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QCheckBox" name="traceCompInputs">
+      <property name="text">
+       <string>Composite inputs</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QCheckBox" name="traceCompOutputs">
+      <property name="text">
+       <string>Composite outputs</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QCheckBox" name="traceModelIn">
+      <property name="text">
+       <string>Model inputs</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QCheckBox" name="traceModelOut">
+      <property name="text">
+       <string>Model outputs</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QCheckBox" name="tracePredMon">
+      <property name="text">
+       <string>Prediction monitoring</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QCheckBox" name="traceGoalMon">
+      <property name="text">
+       <string>Goal monitoring</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QCheckBox" name="traceModelRev">
+      <property name="text">
+       <string>Model revision</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QCheckBox" name="traceModComInj">
+      <property name="text">
+       <string>Model/composite injections</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_21">
+      <property name="text">
+       <string>Decompile objects:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QCheckBox" name="decompileObjects">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_25">
+      <property name="text">
+       <string>Decompile to file:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1">
+     <widget class="KUrlRequester" name="decObjFile"/>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_26">
+      <property name="text">
+       <string>Ignore named objects:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QCheckBox" name="ignoreNamedObj">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_27">
+      <property name="text">
+       <string>Dump objects to file:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="KUrlRequester" name="dumpObjFile"/>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_28">
+      <property name="text">
+       <string>Test objects:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QCheckBox" name="testObj">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QLabel" name="label_30">
+      <property name="text">
+       <string>Decompile models:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="QCheckBox" name="decompileModels">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QLabel" name="label_31">
+      <property name="text">
+       <string>Ignore named models:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="QCheckBox" name="ignoreNamedModels">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0">
+     <widget class="QLabel" name="label_32">
+      <property name="text">
+       <string>Dump models to file:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="1">
+     <widget class="KUrlRequester" name="dumpModelsFile"/>
+    </item>
+    <item row="18" column="0">
+     <widget class="QLabel" name="label_33">
+      <property name="text">
+       <string>Test models:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="QCheckBox" name="testModels">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KUrlRequester</class>
+   <extends>QFrame</extends>
+   <header>kurlrequester.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

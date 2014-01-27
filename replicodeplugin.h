@@ -1,35 +1,32 @@
 #ifndef REPLICODEPLUGIN_H
 #define REPLICODEPLUGIN_H
 
-#include <KTextEditor/Plugin>
+#include "replicodeview.h"
+#include <kate/plugin.h>
+#include <kate/pluginconfigpageinterface.h>
 
-namespace KTextEditor
+
+class ReplicodePlugin : public Kate::Plugin, public Kate::PluginConfigPageInterface
 {
-	class View;
-}
+    Q_OBJECT
+    Q_INTERFACES(Kate::PluginConfigPageInterface)
 
-class ReplicodeView;
-
-class ReplicodePlugin
-  : public KTextEditor::Plugin
-{
   public:
     // Constructor
-    explicit ReplicodePlugin(QObject *parent = 0, const QVariantList &args = QVariantList());
+    explicit ReplicodePlugin(QObject *parent = 0, const QList<QVariant> &args = QList<QVariant>());
     // Destructor
     virtual ~ReplicodePlugin();
 
-    void addView (KTextEditor::View *view);
-    void removeView (KTextEditor::View *view);
- 
-    void readConfig();
-    void writeConfig();
- 
-//     void readConfig (KConfig *);
-//     void writeConfig (KConfig *);
- 
-  private:
-    QList<class ReplicodeView*> m_views;
+    Kate::PluginView *createView(Kate::MainWindow *mainWindow) {
+        return new ReplicodeView(mainWindow);
+    }
+
+    // Config interface
+    uint configPages () const;
+    Kate::PluginConfigPage *configPage (uint number = 0, QWidget *parent = 0, const char *name = 0 );
+    QString configPageFullName (uint number = 0) const;
+    QString configPageName(uint number = 0) const;
+    KIcon configPageIcon (uint number = 0) const;
 };
 
 #endif
